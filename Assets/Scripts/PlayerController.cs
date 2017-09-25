@@ -44,5 +44,10 @@ public class PlayerController : MonoBehaviour {
             isGrounded = true;
             animator.SetTrigger("Run");
         }
+        if (collision.gameObject.tag == "enemy") {
+            animator.SetTrigger("Mortal");
+        }
+
+        Debug.Log(collision);
     }
 }
