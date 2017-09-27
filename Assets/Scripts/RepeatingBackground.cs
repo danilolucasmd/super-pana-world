@@ -41,7 +41,7 @@ public class RepeatingBackground : MonoBehaviour {
                 instantiatedObject = Instantiate(debuff, new Vector3(transform.position.x - 15, transform.position.y - 2, 0), transform.rotation);
                 break;
             case 2:
-                instantiatedObject = Instantiate(airEnemy, new Vector3(transform.position.x - 15, transform.position.y + 2, 0), transform.rotation);
+                instantiatedObject = Instantiate(airEnemy, new Vector3(transform.position.x - 10, transform.position.y + 2, 0), transform.rotation);
                 break;
             case 3:
                 instantiatedObject = Instantiate(groundEnemy, new Vector3(transform.position.x - 15, transform.position.y - 3, 0), transform.rotation);

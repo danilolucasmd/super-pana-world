@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
     private Animator animator;
     private Rigidbody2D rb2d;
     public float jumpHeight = 5f;
+    public GameObject world;
 
     private string[] jumpAnims = new string[]{"Mortal", "Jump"};
     private string[] dashAnims = new string[] {"Lay", "Dash" };
@@ -37,6 +38,8 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyUp("down")) {
             animator.SetBool(curDashAnim, false);
         }
+
+        world.GetComponent<PointsController>().setScore((int)(Time.unscaledTime * 10));
     }
 
     void OnCollisionEnter2D(Collision2D collision) {
@@ -44,10 +47,19 @@ public class PlayerController : MonoBehaviour {
             isGrounded = true;
             animator.SetTrigger("Run");
         }
+
         if (collision.gameObject.tag == "enemy") {
-            animator.SetTrigger("Mortal");
+            Destroy(this.gameObject);
         }
 
-        Debug.Log(collision);
+        if (collision.gameObject.tag == "buff") {
+            Destroy(collision.gameObject);
+            world.GetComponent<PointsController>().IncreaseScore(100);
+        }
+
+        if (collision.gameObject.tag == "debuff") {
+            Destroy(collision.gameObject);
+            world.GetComponent<PointsController>().DecreaseScore(100);
+        }
     }
 }
