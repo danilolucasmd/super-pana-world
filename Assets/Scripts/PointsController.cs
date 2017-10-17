@@ -9,7 +9,11 @@ public class PointsController : MonoBehaviour {
     private int increaseScore = 0;
     public GameObject scoreLabel;
 
-	void Start () {
+    private void Awake() {
+        score = 0;
+    }
+
+    void Start () {
 		
 	}
 

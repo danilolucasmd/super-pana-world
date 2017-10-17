@@ -6,11 +6,16 @@ public class ScrollingObject : MonoBehaviour {
 
     private Rigidbody2D rb2d;
     public float speed = -1.5f;
+    private float _speed;
 
-	// Use this for initialization
-	void Start () {
+    private void Awake() {
+        _speed = speed;
+    }
+
+    // Use this for initialization
+    void Start () {
         rb2d = GetComponent<Rigidbody2D>();
-        rb2d.velocity = new Vector2(speed, 0);
+        rb2d.velocity = new Vector2(_speed, 0);
 	}
 	
 	// Update is called once per frame
