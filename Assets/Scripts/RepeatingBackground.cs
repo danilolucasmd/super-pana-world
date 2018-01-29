@@ -5,11 +5,19 @@ public class RepeatingBackground : MonoBehaviour {
 
     private BoxCollider2D groundCollider;
     private float groundHorizontalLength;
-    public GameObject buff = new GameObject();
-    public GameObject debuff = new GameObject();
-    public GameObject airEnemy = new GameObject();
-    public GameObject groundEnemy = new GameObject();
-    private GameObject instantiatedObject = new GameObject();
+	public GameObject buff;
+	public GameObject debuff;
+	public GameObject airEnemy;
+	public GameObject groundEnemy;
+	private GameObject instantiatedObject;
+
+	private void start() {
+		buff = new GameObject ();
+		debuff = new GameObject ();
+		airEnemy = new GameObject ();
+		groundEnemy = new GameObject ();
+		instantiatedObject = new GameObject ();
+	}
 
     private void Awake() {
         groundCollider = GetComponent<BoxCollider2D>();

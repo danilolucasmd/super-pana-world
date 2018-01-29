@@ -1,0 +1,21 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="Functions">
+			<method name="StartGame"/>
+			<method name="CloseRank"/>
+			<method name="OpenRank"/>
+			<method name="Exit"/>
+			<method name="OpenRank"/>
+			<method name="Exit"/>
+			<method name="SendScore"/>
+			<method name="Restart"/>
+			<method name="Restart"/>
+			<method name="CloseRank"/>
+		</type>
+		<type fullname="PlayerController">
+			<method name="JumpDown"/>
+			<method name="DashDown"/>
+			<method name="DashUp"/>
+		</type>
+	</assembly>
+</linker>
