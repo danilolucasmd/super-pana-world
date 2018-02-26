@@ -1,0 +1,13 @@
+{
+"companyName": "DefaultCompany",
+"productName": "Super Pana World",
+"dataUrl": "spw.data.unityweb",
+"asmCodeUrl": "spw.asm.code.unityweb",
+"asmMemoryUrl": "spw.asm.memory.unityweb",
+"asmFrameworkUrl": "spw.asm.framework.unityweb",
+"TOTAL_MEMORY": 268435456,
+"graphicsAPI": ["WebGL 2.0", "WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20"
+}
